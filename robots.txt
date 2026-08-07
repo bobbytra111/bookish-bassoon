@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Запрет индексации 404-страницы
+Disallow: /404.html
