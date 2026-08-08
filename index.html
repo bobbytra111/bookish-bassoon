@@ -349,12 +349,7 @@
             box-shadow: 0 20px 50px rgba(0, 135, 47, 0.3);
         }
 
-        /* ===== TARIFFS ===== */
-        .tariffs {
-            padding: 100px 0;
-            background: var(--green-bg);
-        }
-
+        /* ===== SECTION HEAD ===== */
         .section-head {
             display: flex;
             justify-content: space-between;
@@ -384,6 +379,12 @@
             letter-spacing: 2px;
             margin-bottom: 12px;
             display: block;
+        }
+
+        /* ===== TARIFFS ===== */
+        .tariffs {
+            padding: 100px 0;
+            background: var(--green-bg);
         }
 
         .tariffs-grid {
@@ -686,7 +687,7 @@
             line-height: 1.6;
         }
 
-        /* ===== CTA ===== */
+        /* ===== CTA / ПОДКЛЮЧЕНИЕ ===== */
         .cta {
             padding: 100px 0;
         }
@@ -742,34 +743,8 @@
         .cta-content p {
             font-size: 17px;
             opacity: 0.9;
-            margin-bottom: 32px;
+            margin-bottom: 0;
             max-width: 440px;
-        }
-
-        .cta-contacts {
-            display: flex;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-
-        .cta-contact {
-            color: var(--white);
-            text-decoration: none;
-        }
-
-        .cta-contact-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            opacity: 0.7;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .cta-contact-value {
-            font-size: 18px;
-            font-weight: 600;
         }
 
         .cta-form {
@@ -835,6 +810,94 @@
             color: var(--gray);
             margin-top: 12px;
             text-align: center;
+        }
+
+        /* ===== CONTACTS ===== */
+        .contacts {
+            padding: 100px 0;
+            background: var(--green-bg);
+        }
+
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .contact-card:hover {
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        .contact-card-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--green);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .contact-card-value {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .contact-card-value a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-card-value a:hover {
+            color: var(--green);
+        }
+
+        .contact-card-sub {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .contact-card-wide {
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .contact-card-wide .contact-info {
+            padding-right: 20px;
+        }
+
+        .contact-map {
+            background: var(--green-soft);
+            border-radius: 12px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--gray);
+            overflow: hidden;
+        }
+
+        .contact-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* ===== FOOTER ===== */
@@ -930,6 +993,15 @@
                 padding: 48px 32px;
             }
 
+            .contacts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card-wide {
+                grid-column: span 1;
+                grid-template-columns: 1fr;
+            }
+
             .footer-top {
                 grid-template-columns: 1fr 1fr;
                 gap: 40px;
@@ -992,9 +1064,8 @@
                 text-align: center;
             }
 
-            .cta-contacts {
-                flex-direction: column;
-                gap: 20px;
+            .contact-card-value {
+                font-size: 22px;
             }
         }
     </style>
@@ -1012,7 +1083,7 @@
                 <a href="#tariffs">Тарифы</a>
                 <a href="#services">Услуги</a>
                 <a href="#steps">Как подключиться</a>
-                <a href="#contact">Контакты</a>
+                <a href="#contacts">Контакты</a>
             </nav>
             <a href="#contact" class="btn-connect">Подключиться →</a>
             <button class="mobile-btn">☰</button>
@@ -1174,27 +1245,13 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA / ПОДКЛЮЧЕНИЕ -->
     <section class="cta" id="contact">
         <div class="container">
             <div class="cta-box">
                 <div class="cta-content">
                     <h2>Готовы подключиться?<br>Оставьте заявку</h2>
                     <p>Перезвоним в течение 15 минут в рабочее время. Расскажем, какие тарифы доступны на вашем адресе.</p>
-                    <div class="cta-contacts">
-                        <a href="tel:+79901022050" class="cta-contact">
-                            <span class="cta-contact-label">Телефон</span>
-                            <span class="cta-contact-value">+7 990 102-20-50</span>
-                        </a>
-                        <a href="#" class="cta-contact">
-                            <span class="cta-contact-label">Чат в MAX</span>
-                            <span class="cta-contact-value">+7 990 159-30-12</span>
-                        </a>
-                        <a href="#" class="cta-contact">
-                            <span class="cta-contact-label">Офис</span>
-                            <span class="cta-contact-value">Университетская, 12-б</span>
-                        </a>
-                    </div>
                 </div>
                 <form class="cta-form">
                     <h3>Заявка на подключение</h3>
@@ -1210,6 +1267,62 @@
                     <button type="submit">Отправить заявку →</button>
                     <div class="form-note">Перезвоним в течение 15 минут</div>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <span class="section-label">04 — Контакты</span>
+                    <h2>Мы на связи</h2>
+                </div>
+                <p>Звоните, пишите в чат или приходите в офис. Работаем каждый день.</p>
+            </div>
+            <div class="contacts-grid">
+                <div class="contact-card contact-card-wide">
+                    <div class="contact-info">
+                        <span class="contact-card-label">Офис</span>
+                        <div class="contact-card-value">г. Бердянск,<br>ул. Университетская, 12-б</div>
+                        <div class="contact-card-sub">Пн–Пт: 9:00–18:00, Сб: 9:00–15:00</div>
+                    </div>
+                    <div class="contact-map">
+                        <!-- Здесь можно вставить iframe с картой -->
+                        <span>📍 Карта</span>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-card-label">Телефоны</span>
+                    <div class="contact-card-value">
+                        <a href="tel:+79901022050">+7 990 102-20-50</a>
+                    </div>
+                    <div class="contact-card-sub">
+                        Также: <a href="tel:+79901022055" style="color: var(--green); text-decoration: none;">+7 990 102-20-55</a><br>
+                        <a href="tel:+79900902323" style="color: var(--green); text-decoration: none;">+7 990 090-23-23</a><br>
+                        <a href="tel:+79900901616" style="color: var(--green); text-decoration: none;">+7 990 090-16-16</a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-card-label">Чат в MAX</span>
+                    <div class="contact-card-value">
+                        <a href="#">+7 990 159-30-12</a>
+                    </div>
+                    <div class="contact-card-sub">Быстрые ответы на вопросы по подключению и оплате</div>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-card-label">Email</span>
+                    <div class="contact-card-value">
+                        <a href="mailto:clients@onet-group.ru">clients@onet-group.ru</a>
+                    </div>
+                    <div class="contact-card-sub">Для документов, вопросов по тарифам и предложений</div>
+                </div>
+                <div class="contact-card">
+                    <span class="contact-card-label">Поддержка</span>
+                    <div class="contact-card-value">24 / 7</div>
+                    <div class="contact-card-sub">Техническая поддержка работает круглосуточно — без выходных</div>
+                </div>
             </div>
         </div>
     </section>
