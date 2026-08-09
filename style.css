@@ -1,0 +1,74 @@
+:root{
+  /* ≈5 см на 13″ экране. Хочешь шире/уже — меняй только здесь */
+  --sidebar-w: 220px;
+
+  --green: #00913E;
+  --green-dark: #007A34;
+  --green-light: #E9F6EF;
+  --orange: #F07C00;
+  --bg: #F6F8FB;
+  --text: #202634;
+  --muted: #6B7686;
+  --border: #E4E9F0;
+  --radius: 14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--text)}
+
+/* ================= ЛЕВАЯ КОЛОНКА ================= */
+.sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-w);background:#fff;
+  border-right:1px solid var(--border);display:flex;flex-direction:column;padding:16px 14px;z-index:10}
+.logo{display:block;padding:4px 4px 14px;border-bottom:1px solid var(--border)}
+.logo svg{width:100%;height:auto;display:block}
+
+.nav{display:flex;flex-direction:column;gap:6px;padding-top:14px}
+/* Новые пункты просто копируй по образцу этих двух */
+.nav-btn{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;
+  text-decoration:none;color:var(--text);font-weight:600;font-size:15px;
+  border-left:3px solid transparent;transition:.15s}
+.nav-btn svg{width:20px;height:20px;stroke:var(--green);flex:none;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover{background:var(--green-light);color:var(--green-dark)}
+.nav-btn.active{background:var(--green-light);border-left-color:var(--green);color:var(--green-dark)}
+
+.sidebar-contacts{margin-top:auto;font-size:12px;color:var(--muted);line-height:1.6;border-top:1px solid var(--border);padding-top:12px}
+.sidebar-contacts a{color:var(--green-dark);text-decoration:none;font-weight:700}
+
+/* ================= КОНТЕНТ ================= */
+.content{margin-left:var(--sidebar-w);padding:36px 40px;min-height:100vh}
+.page-head h1{font-size:30px}
+.lead{color:var(--muted);max-width:760px;margin-top:8px;font-size:15px}
+h2{margin:28px 0 4px;font-size:20px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:17px}
+.card p{font-size:13.5px;color:var(--muted)}
+.card a{margin-top:auto;color:var(--green-dark);font-weight:700;text-decoration:none;font-size:14px}
+
+.tariffs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:14px}
+.tariff{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:8px}
+.tariff.hit{border-color:var(--green);box-shadow:0 6px 18px rgba(0,145,62,.12)}
+.speed{color:var(--muted);font-size:13px}
+.price{font-size:26px;font-weight:800;color:var(--green-dark)}
+.price span{font-size:13px;color:var(--muted);font-weight:600}
+.tariff ul{list-style:none;display:flex;flex-direction:column;gap:6px;font-size:13.5px}
+.tariff ul li::before{content:"✓";color:var(--green);font-weight:800;margin-right:6px}
+.tag{display:inline-block;background:var(--green-light);color:var(--green-dark);font-size:11px;font-weight:800;border-radius:6px;padding:3px 8px;margin-bottom:4px}
+
+.btn{display:inline-block;background:var(--green);color:#fff;border-radius:10px;padding:10px 18px;font-weight:700;text-decoration:none;margin-top:8px;text-align:center}
+.btn:hover{background:var(--green-dark)}
+.btn.orange{background:var(--orange)}
+.btn.orange:hover{background:#d96f00}
+
+.note{background:#FFF7EC;border:1px solid #F5D9B0;color:#8A5A16;border-radius:10px;padding:10px 14px;font-size:13px;margin-top:14px}
+
+.footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;display:flex;gap:24px;flex-wrap:wrap}
+
+/* Узкие экраны: колонка превращается в верхнюю панель */
+@media (max-width:860px){
+  .sidebar{position:static;width:auto;flex-direction:row;align-items:center;gap:10px;border-right:none;border-bottom:1px solid var(--border)}
+  .logo{width:110px;border:none;padding:0}
+  .nav{flex-direction:row;padding-top:0}
+  .sidebar-contacts{display:none}
+  .content{margin-left:0;padding:24px}
+}
