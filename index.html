@@ -4,36 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ОНЕТ ГРУПП — ваш надёжный интернет</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <aside class="sidebar">
   <a class="logo" href="index.html" aria-label="Onet Group — на главную">
-    <!-- Логотип-заглушка в фирменных цветах. Потом можно заменить на свой файл: <img src="logo.svg"> -->
-    <svg viewBox="0 0 720 600" xmlns="http://www.w3.org/2000/svg">
+    <svg class="logo-svg" viewBox="0 0 720 600" width="720" height="600" xmlns="http://www.w3.org/2000/svg">
       <circle cx="252" cy="300" r="232" fill="#00913E"/>
       <circle cx="228" cy="292" r="102" fill="#FFFFFF"/>
-      <text x="330" y="392" font-family="Arial, sans-serif" font-size="210" font-weight="700" fill="#00913E">net</text>
-      <clipPath id="cc"><circle cx="252" cy="300" r="232"/></clipPath>
-      <text x="330" y="392" font-family="Arial, sans-serif" font-size="210" font-weight="700" fill="#FFFFFF" clip-path="url(#cc)">net</text>
+      <text x="340" y="392" font-family="Arial, sans-serif" font-size="210" font-weight="700" fill="#00913E" textLength="330" lengthAdjust="spacingAndGlyphs">net</text>
+      <defs><clipPath id="cc"><circle cx="252" cy="300" r="232"/></clipPath></defs>
+      <text x="340" y="392" font-family="Arial, sans-serif" font-size="210" font-weight="700" fill="#FFFFFF" clip-path="url(#cc)" textLength="330" lengthAdjust="spacingAndGlyphs">net</text>
       <rect x="330" y="402" width="310" height="72" fill="#F07C00"/>
       <rect x="228" y="402" width="102" height="72" fill="#9CCB9C"/>
-      <text x="380" y="455" font-family="Arial, sans-serif" font-size="50" letter-spacing="8" fill="#FFFFFF">GROUP</text>
+      <text x="372" y="455" font-family="Arial, sans-serif" font-size="50" fill="#FFFFFF" textLength="240" lengthAdjust="spacingAndGlyphs">GROUP</text>
     </svg>
   </a>
 
   <nav class="nav">
     <a class="nav-btn" href="internet.html">
-      <svg viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5 12a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.5"/></svg>
+      <svg class="nav-ico" viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5 12a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.5"/></svg>
       Интернет
     </a>
     <a class="nav-btn" href="tv.html">
-      <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 2l4 4 4-4"/></svg>
+      <svg class="nav-ico" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 2l4 4 4-4"/></svg>
       Телевидение
     </a>
-    <!-- Сюда потом добавляются новые пункты, например:
-    <a class="nav-btn" href="equipment.html">Оборудование</a> -->
   </nav>
 
   <div class="sidebar-contacts">
@@ -44,16 +41,16 @@
 </aside>
 
 <main class="content">
-  <!-- ⚠️ ГЛАВНАЯ ВРЕМЕННАЯ: контент главной обсудим отдельно и заменим этот блок -->
+  <!-- ВРЕМЕННАЯ ГЛАВНАЯ — контент заменим по твоему описанию -->
   <header class="page-head">
     <h1>ОНЕТ ГРУПП</h1>
-    <p class="lead">Ведущий интернет-провайдер Запорожской области. Подключаем интернет в квартирах и частном секторе по технологиям Ethernet и PON на скорости до 1000 Мбит/с и даём доступ к 140+ ТВ-каналам.</p>
+    <p class="lead">Ведущий интернет-провайдер Запорожской области. Интернет до 1000 Мбит/с и 140+ ТВ-каналов в Бердянске и районе.</p>
   </header>
 
   <section class="cards">
     <div class="card">
       <h3>Интернет</h3>
-      <p>Безлимитный интернет до 1000 Мбит/с в Бердянске и районе. Ethernet для многоквартирных домов, GPON для частного сектора.</p>
+      <p>Безлимитный интернет до 1000 Мбит/с. Ethernet для многоквартирных домов, GPON для частного сектора.</p>
       <a href="internet.html">Смотреть тарифы →</a>
     </div>
     <div class="card">
