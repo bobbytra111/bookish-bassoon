@@ -38,7 +38,7 @@ body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;back
 .lead{color:var(--muted);max-width:760px;margin-top:8px;font-size:15px}
 h2{margin:28px 0 4px;font-size:20px}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:14px}
 .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:8px}
 .card h3{font-size:17px}
 .card p{font-size:13.5px;color:var(--muted)}
@@ -60,16 +60,17 @@ h2{margin:28px 0 4px;font-size:20px}
 .btn.orange:hover{background:#d96f00}
 
 .note{background:#FFF7EC;border:1px solid #F5D9B0;color:#8A5A16;border-radius:10px;padding:10px 14px;font-size:13px;margin-top:14px}
+.note a{color:var(--green-dark);font-weight:700;text-decoration:none}
 
 .footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;display:flex;gap:24px;flex-wrap:wrap}
 
-/* ========== ТОЛЬКО УЗКИЕ ЭКРАНЫ ========== */
+/* ========== УЗКИЕ ЭКРАНЫ ========== */
 @media (max-width:700px){
   .sidebar{position:static;width:auto;flex-direction:row;align-items:center;gap:12px;
     padding:10px 14px;border-right:none;border-bottom:1px solid var(--border)}
   .logo{width:96px;padding:0;border:none}
   .logo-svg{max-height:80px}
-  .nav{flex-direction:row;padding-top:0;gap:4px}
+  .nav{flex-direction:row;padding-top:0;gap:4px;flex-wrap:wrap}
   .nav-btn{padding:8px 10px;font-size:14px;border-left:none}
   .sidebar-contacts{display:none}
   .content{margin-left:0;padding:20px}
