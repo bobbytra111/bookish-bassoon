@@ -22,14 +22,12 @@
     </svg>
   </a>
   <nav class="nav">
-    <a class="nav-btn active" href="internet.html">
-      <svg class="nav-ico" viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5 12a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.5"/></svg>
-      Интернет
-    </a>
-    <a class="nav-btn" href="tv.html">
-      <svg class="nav-ico" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 2l4 4 4-4"/></svg>
-      Телевидение
-    </a>
+    <a class="nav-btn active" href="internet.html"><svg class="nav-ico" viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0"/><path d="M5 12a10 10 0 0 1 14 0"/><path d="M8.5 15.5a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1.5"/></svg>Интернет</a>
+    <a class="nav-btn" href="tv.html"><svg class="nav-ico" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 2l4 4 4-4"/></svg>Телевидение</a>
+    <a class="nav-btn" href="equipment.html"><svg class="nav-ico" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="12" rx="2"/><path d="M6 20h12"/><path d="M12 16v4"/></svg>Оборудование</a>
+    <a class="nav-btn" href="about.html"><svg class="nav-ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>О компании</a>
+    <a class="nav-btn" href="news.html"><svg class="nav-ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10"/><path d="M7 12h10"/><path d="M7 16h6"/></svg>Новости</a>
+    <a class="nav-btn" href="contacts.html"><svg class="nav-ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>Контакты</a>
   </nav>
   <div class="sidebar-contacts">
     г. Бердянск, ул. Университетская, 12-б<br>
@@ -41,24 +39,44 @@
 <main class="content">
   <header class="page-head">
     <h1>Интернет</h1>
-    <p class="lead">Подключаем интернет в квартирах и частном секторе по технологиям Ethernet и PON на скорости до 1000 Мбит/с. Безлимит, техническая поддержка и услуга «Кредит доверия».</p>
+    <p class="lead">Подключаем интернет в квартирах и частном секторе по технологиям Ethernet и GPON на скорости до 1000 Мбит/с. Безлимит, профессиональная техподдержка и удобные сервисы для клиентов.</p>
   </header>
 
-  <h2>Тарифы в многоквартирном доме</h2>
+  <h2>Преимущества</h2>
+  <div class="cards">
+    <div class="card"><h3>Безлимит</h3><p>Неограниченный объём трафика — смотрите, работайте и играйте сколько угодно.</p></div>
+    <div class="card"><h3>Скорость до 1000 Мбит/с</h3><p>Максимальный тариф для самых требовательных абонентов.</p></div>
+    <div class="card"><h3>Техподдержка</h3><p>Оперативная и профессиональная помощь в любой день.</p></div>
+    <div class="card"><h3>Кредит доверия</h3><p>Отсрочка платежа до 5 дней — если забыли оплатить вовремя.</p></div>
+  </div>
+
+  <h2>Технологии подключения</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Ethernet — многоквартирные дома</h3>
+      <p>Прокладка сетевого кабеля от оператора к абоненту. Низкая стоимость подключения, простое и долговечное решение, не требующее абонентского устройства.</p>
+    </div>
+    <div class="card">
+      <h3>GPON — частный сектор</h3>
+      <p>Современная оптическая технология: низкая зависимость от погоды, отсутствие промежуточных узлов, защита от хищения кабеля. Надёжное и быстрое подключение.</p>
+    </div>
+  </div>
+
+  <h2>Тарифы — многоквартирные дома</h2>
   <div class="tariffs">
     <div class="tariff">
       <h3>Оптимальный</h3>
       <div class="speed">до 50 Мбит/с</div>
       <div class="price">850 <span>руб/мес</span></div>
       <ul><li>Безлимит</li><li>«Кредит доверия»</li></ul>
-      <a class="btn" href="#">Подключиться</a>
+      <a class="btn" href="contacts.html">Подключиться</a>
     </div>
     <div class="tariff">
       <h3>Максимальный</h3>
       <div class="speed">до 100 Мбит/с</div>
       <div class="price">900 <span>руб/мес</span></div>
       <ul><li>Безлимит</li><li>«Кредит доверия»</li><li>IPTV бесплатно</li></ul>
-      <a class="btn" href="#">Подключиться</a>
+      <a class="btn" href="contacts.html">Подключиться</a>
     </div>
     <div class="tariff hit">
       <span class="tag">Выгодный</span>
@@ -66,25 +84,25 @@
       <div class="speed">до 1000 Мбит/с</div>
       <div class="price">1050 <span>руб/мес</span></div>
       <ul><li>Безлимит</li><li>«Кредит доверия»</li><li>IPTV бесплатно</li></ul>
-      <a class="btn" href="#">Подключиться</a>
+      <a class="btn" href="contacts.html">Подключиться</a>
     </div>
   </div>
 
-  <h2>Тарифы в частном секторе и районе (GPON)</h2>
+  <h2>Тарифы — частный сектор и район (GPON)</h2>
   <div class="tariffs">
     <div class="tariff">
       <h3>Оптимальный</h3>
       <div class="speed">до 50 Мбит/с</div>
       <div class="price">800 <span>руб/мес</span></div>
-      <ul><li>Бердянск — 800 руб</li><li>Другие насел. пункты — 850 руб</li></ul>
-      <a class="btn" href="#">Подключиться</a>
+      <ul><li>Бердянск — 800 ₽</li><li>Другие насел. пункты — 850 ₽</li></ul>
+      <a class="btn" href="contacts.html">Подключиться</a>
     </div>
     <div class="tariff">
       <h3>Максимальный</h3>
       <div class="speed">до 100 Мбит/с</div>
       <div class="price">850 <span>руб/мес</span></div>
-      <ul><li>Бердянск — 850 руб</li><li>Другие насел. пункты — 900 руб</li><li>IPTV бесплатно</li></ul>
-      <a class="btn" href="#">Подключиться</a>
+      <ul><li>Бердянск — 850 ₽</li><li>Другие насел. пункты — 900 ₽</li><li>IPTV бесплатно</li></ul>
+      <a class="btn" href="contacts.html">Подключиться</a>
     </div>
     <div class="tariff hit">
       <span class="tag">Выгодный</span>
@@ -92,11 +110,33 @@
       <div class="speed">без ограничений</div>
       <div class="price">1050 <span>руб/мес</span></div>
       <ul><li>Только Бердянск</li><li>IPTV бесплатно</li></ul>
-      <a class="btn" href="#">Подключиться</a>
+      <a class="btn" href="contacts.html">Подключиться</a>
     </div>
   </div>
 
-  <p class="note">Подключение в Бердянске — 3500 руб, в других населённых пунктах — 4500 руб. Тарифы для юридических лиц уточняйте в офисе или по телефону.</p>
+  <h2>Тарифы для юридических лиц</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Для ИП и ООО</h3>
+      <p>Индивидуальный подбор тарифа под задачи вашего бизнеса. Скорости и условия обсуждаются персонально.</p>
+      <a class="btn" href="contacts.html">Связаться с нами</a>
+    </div>
+  </div>
+
+  <h2>Сервисы для клиентов</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Интернет-телевидение</h3>
+      <p>Интерактивное IPTV с преимуществами перед кабельным ТВ: архив, пауза, перемотка, «Избранное» и родительский контроль.</p>
+      <a href="tv.html">Перейти к пакетам →</a>
+    </div>
+    <div class="card">
+      <h3>«Кредит доверия»</h3>
+      <p>Забыли или не успели оплатить? Единоразовая отсрочка платежа: до 2 дней через оператора или до 5 дней самостоятельно из личного кабинета.</p>
+    </div>
+  </div>
+
+  <p class="note">Стоимость подключения: Бердянск — 3500 ₽, другие населённые пункты — 4500 ₽. Тарифы для юридических лиц уточняйте в офисе или по телефону.</p>
 
   <footer class="footer">
     <span>г. Бердянск, ул. Университетская, 12-б</span>
