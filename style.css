@@ -1,5 +1,5 @@
 :root{
-  --sidebar-w:220px; /* ≈5 см на 13″ экране */
+  --sidebar-w:220px;
   --topbar-h:56px;
   --green:#00913E;
   --green-dark:#007A34;
@@ -12,18 +12,19 @@
   --radius:14px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);padding-top:var(--topbar-h)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
 
 /* ========== ВЕРХНЯЯ ПАНЕЛЬ ========== */
 .topbar{position:fixed;top:0;left:0;right:0;height:var(--topbar-h);background:#fff;
-  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:18px;
-  padding:0 20px;z-index:20;font-size:13px}
-.tb-item{color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap}
-a.tb-item:hover{color:var(--green-dark)}
-.tb-ico{width:16px;height:16px;flex:none;stroke:var(--green);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.btn-lk{margin-left:auto;background:var(--orange);color:#fff;border-radius:10px;padding:9px 16px;
-  font-weight:700;text-decoration:none;font-size:13.5px;white-space:nowrap}
-.btn-lk:hover{background:#d96f00}
+  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px;
+  padding:0 22px;z-index:20;font-size:12.5px;color:var(--muted)}
+.tb-item{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.tb-ico{width:14px;height:14px;stroke:var(--green);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.topbar a{display:flex;align-items:center;gap:6px;color:var(--text);text-decoration:none;font-weight:600;white-space:nowrap}
+.topbar a:hover{color:var(--green-dark)}
+.sep{width:1px;height:20px;background:var(--border);flex:none}
+.topbar .btn-lk{margin-left:auto;background:var(--orange);color:#fff;font-weight:700;padding:8px 16px;border-radius:9px;font-size:13px}
+.topbar .btn-lk:hover{background:#d96f00;color:#fff}
 
 /* ========== ЛЕВАЯ КОЛОНКА ========== */
 .sidebar{position:fixed;top:var(--topbar-h);left:0;bottom:0;width:var(--sidebar-w);background:#fff;
@@ -41,7 +42,7 @@ a.tb-item:hover{color:var(--green-dark)}
 .nav-ico{width:20px;height:20px;flex:none;stroke:var(--green);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ========== КОНТЕНТ ========== */
-.content{margin-left:var(--sidebar-w);padding:28px 40px 36px;min-height:calc(100vh - var(--topbar-h))}
+.content{margin-left:var(--sidebar-w);padding:calc(var(--topbar-h) + 28px) 40px 36px;min-height:100vh}
 .page-head h1{font-size:30px}
 .lead{color:var(--muted);max-width:760px;margin-top:8px;font-size:15px}
 h2{margin:28px 0 4px;font-size:20px}
@@ -73,11 +74,13 @@ h2{margin:28px 0 4px;font-size:20px}
 .footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;display:flex;gap:24px;flex-wrap:wrap}
 
 /* ========== АДАПТИВ ========== */
+@media (max-width:1100px){ .hide-md{display:none} }
 @media (max-width:900px){
-  .tb-addr{display:none}
+  .topbar{position:static;height:auto;flex-wrap:wrap;padding:10px 16px;gap:10px;row-gap:6px}
+  .sidebar{top:0}
+  .content{padding-top:28px}
 }
 @media (max-width:700px){
-  .tb-mail{display:none}
   .sidebar{position:static;width:auto;flex-direction:row;align-items:center;gap:12px;
     padding:10px 14px;border-right:none;border-bottom:1px solid var(--border)}
   .logo{width:96px;padding:0;border:none}
